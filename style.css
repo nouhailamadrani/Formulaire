@@ -1,38 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
-
- :root{
-   
-     --success-color:#0def18;
-    --error-color: #d32b18;
-} 
 *{
     box-sizing: border-box;
 }
-body{  
-    background:url(dodo.jpg)  ;
+body{
+    background:url(dodo.jpg)no-repeat;
     background-size: cover;
-    height: 600px;
-    font-family: 'DynaPuff', cursive;
+    height: 700px;
+    font-family: 'Roboto Slab', serif;
+    
     display: flex;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
     margin: 0;
-    min-height: 100vh; }
-    
+    min-height: 100vh;
+}
 .container{
-    background-color: rgb(121, 215, 39);
+    background-color: rgb(183, 235, 179);
     border-radius: 5px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0);
+    box-shadow: 0 3px 8px rgba(230, 204, 230, 0);
     width:400px ;
     max-width: 100%;
     overflow: hidden;
-margin-right: 40px;
+
 }
 .header{
-    background-color: #92e385;
-    padding: 20px 40px;
-    border-bottom: 1px solid #92e385;
+    background-color: #0a4a14;
+    padding: 10px 30px;
+    border-bottom: 1px solid #e3dee3;
 }
 .header h2{
     margin: 0;
@@ -48,9 +43,10 @@ margin-right: 40px;
 .form-control label{
     display: inline-block;
     margin-bottom: 5px;
+    color:#ede9ed;
 }
 .form-control input{
-    border: 2px solid #c0f09d;
+    border: 2px solid #e3dee3;
     border-radius: 4px;
     display: block;
     width:100%;
@@ -58,12 +54,21 @@ margin-right: 40px;
     font-size: 13px;
 
 }
-/* .form-control.success input{
+.form-control select{
+    border: 2px solid #e3dee3;
+    border-radius: 4px;
+    display: block;
+    width:100%;
+    padding: 10px;
+    font-size: 13px;
+
+}
+.form-control.success input{
     border-color: rgb(80, 237, 132);
 }
 .form-control.error input{
     border-color: rgb(235, 27, 27);
-} */
+}
 .form-control i{
     position: absolute;
     top: 40px;
@@ -71,16 +76,21 @@ margin-right: 40px;
     /* visibility: hidden; */
 
 }
+.form-control.error small{
+    visibility: visible;
+    color: rgb(235, 27, 27) ;
+
+
+}
 
 .form-control small{
-    position: absolute;
+     position: absolute;
     visibility: hidden;
     left: 0;
-    bottom: 0;
+    padding-top: 5px;
 }
 .form button{
-    background-color: rgb(43, 81, 9);
-    font-family: 'DynaPuff', cursive;
+    background-color: #084514;
     border: 2px solid white ;
     color: #fff;
     display: block;
@@ -88,8 +98,8 @@ margin-right: 40px;
     padding: 10px;
     font-size: 16px;
     border-radius: 4px;
-
- 
-     
-   
+}
+.form button:hover{
+    background-color: #ede9ed;
+    color: #115e2d;
 }
