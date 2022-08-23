@@ -20,7 +20,7 @@ form.addEventListener("submit", (e) => {
     const fullNameValue = fullName.value.trim();
     // const usernameValue = userName.value.trim().toLowerCase();
     const emailValue = email.value.trim();
-    const genderValue = gender.value.trim();
+    const genderValue = gender.value;
     const ageValue = age.value.trim();
     const phoneNumberValue = phoneNumber.value.trim();
     const passwordValue = password.value.trim();
@@ -29,12 +29,12 @@ form.addEventListener("submit", (e) => {
     if (fullNameValue === "") {
         // show error message
         // add error class
-        setErrorMessage(fullName, "Full Name field can't be blank. Required this field.");
+        setErrorMessage(fullName, "Full Name can't be blank. Try again");
     
         // focus element
         fullName.focus();
-      } else if (fullNameValue.length < 3 || fullNameValue.length > 50) {
-        setErrorMessage(fullName, "This field minimum character is 5 and maximum character is 50. Please input at this range.");
+      } else if (fullNameValue.length < 3) {
+        setErrorMessage(fullName, "This field minimum character is 3. try again");
     
         // focus element
         fullName.focus();
@@ -42,17 +42,17 @@ form.addEventListener("submit", (e) => {
         // add success class
         setSuccessMessage(fullName);
       }
-
+      
       // !email validation check
        if (emailValue === "") {
         // show error message
         // add error class
-        setErrorMessage(email, "Email field can't be blank. Required this field.");
+        setErrorMessage(email, "Email field can't be blank. try again");
     
         // focus element
         email.focus();
       } else if (!isValidateEmail(emailValue)) {
-        setErrorMessage(email, "Sorry! Your define email is not valid.");
+        setErrorMessage(email, "Sorry! Your  email is invalid.");
     
         // focus element
         email.focus();
@@ -65,12 +65,12 @@ form.addEventListener("submit", (e) => {
       if (phoneNumberValue === "") {
         // show error message
         // add error class
-        setErrorMessage(phoneNumber, "Phone Number field can't be blank. Required this field.");
+        setErrorMessage(phoneNumber, "Phone Number field can't be blank. Try again.");
     
         // focus element
         phoneNumber.focus();
       } else if (phoneNumberValue.length < 10) {
-        setErrorMessage(phoneNumber, "This field minimum maximum character is 11. Please input at this range.");
+        setErrorMessage(phoneNumber, "This range minimum maximum character is 10. Please enter 10 numbers.");
     
         // focus element
         phoneNumber.focus();
@@ -82,15 +82,15 @@ form.addEventListener("submit", (e) => {
       if (ageValue === "") {
         // show error message
         // add error class
-        setErrorMessage(age, "Age field can't be blank. Required this field.");
+        setErrorMessage(age, "Age field can't be blank. Try again.");
     
         // focus element
-        password.focus();
-      } else if (ageValue < 18 || ageValue.length > 2) {
-        setErrorMessage(age, "This field minimum character is 18 . Please input at this range.");
+        age.focus();
+      } else if (ageValue < 18 ) {
+        setErrorMessage(age, "You should have 18 to submit");
     
         // focus element
-        password.focus();
+        age.focus();
       } else {
         // add success class
         setSuccessMessage(age);
@@ -105,8 +105,8 @@ if (passwordValue === "") {
 
     // focus element
     password.focus();
-  } else if (passwordValue.length < 6 || passwordValue.length > 20) {
-    setErrorMessage(password, "This field minimum character is 6 and maximum character is 20. Please input at this range.");
+  } else if (passwordValue.length < 8) {
+    setErrorMessage(password, "This field minimum character is 8");
 
     // focus element
     password.focus();
@@ -119,12 +119,12 @@ if (passwordValue === "") {
   if (checkPasswordValue === "") {
     // show error message
     // add error class
-    setErrorMessage(checkPassword, "Password field can't be blank. Required this field.");
+    setErrorMessage(checkPassword, "Password field can't be blank. enter the password.");
 
     // focus element
     checkPassword.focus();
-  } else if (checkPasswordValue.length < 6 || checkPasswordValue.length > 20) {
-    setErrorMessage(checkPassword, "This field minimum character is 6 and maximum character is 20. Please input at this range.");
+  } else if (checkPasswordValue.length < 8) {
+    setErrorMessage(checkPassword, "This field minimum character is 8. Please input correct password");
 
     // focus element
     checkPassword.focus();
@@ -136,6 +136,12 @@ if (passwordValue === "") {
   } else {
     // add success class
     setSuccessMessage(checkPassword);
+  }
+
+  if(genderValue=='default') {
+    setErrorMessage(gender, "Please select your gender");
+  }else{
+    setSuccessMessage(gender);
   }
   }
   // !input error message show function
@@ -160,19 +166,7 @@ function setErrorMessage(input, message) {
     formControl.className = "form-control success";
   }
   
-  // !proper username validation check
-  function isUserNameValid(username) {
-    /* 
-      Usernames can only have: 
-      - Lowercase Letters (a-z) 
-      - Numbers (0-9)
-      - Dots (.)
-      - Underscores (_)
-    */
-    const res = /^[a-z0-9_\.]+$/.exec(username);
-    const valid = !!res;
-    return valid;
-  }
+  
   
   // !proper email validation check
   function isValidateEmail(email) {

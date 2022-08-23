@@ -5,28 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Formulaire d'inscription</title>
+    <title>Form Validation js</title>
 </head>
 <body>
     <div class ="container">
         <div class ="header">
-            <h2>Create Account</h2>
+            <h2>Create an Account</h2>
 
         </div>
-        <form class="form" id="form">
-        
+        <form class="form" id="form">      
 
         <div class ="form-control ">
             <label >Full Name</label>
-            <input type="text"  id="fullName"  placeholder="Fullname">
-            <i class="fas fa-check-circle"></i>
-            <i class="fas fa-exclamation-circle"></i>
+            <input type="text"  id="fullName"  placeholder="FullName">
             <small> Error message </small>
     
         </div>
         <div class ="form-control ">
             <label >Age</label>
-            <input type="text"  id="age"  placeholder="Age">
+            <input type="number"  id="age"  placeholder="Age">
             
             <small> Error message </small>
     
@@ -34,8 +31,6 @@
         <div class ="form-control ">
                 <label >Email</label>
                 <input type="text"  id="email"  placeholder="Email address">
-                <i class="fas fa-check-circle"></i>
-                <i class="fas fa-exclamation-circle"></i>
                 <small> Error message </small>
         
         </div>
@@ -44,33 +39,28 @@
         <div class="form-control">
             <label>Your Gender</label>
             <select name="gender" id="gender">
-              <option disabled selected value>-- select an option --</option>
+              <option value="default" selected>-- select an option --</option>
               <option value="male">Male</option>
               <option value="female">Female</option>
             </select>
+            <small> Error message </small>
           </div>
 
           <div class ="form-control ">
             <label >Phone Number</label>
-            <input type="text"  id="phoneNumber"  placeholder="Phone number">
-            
+            <input type="number"  id="phoneNumber"  placeholder="Phone number">  
             <small> Error message </small>
     
-        </div>
-
+         </div>
         <div class ="form-control">
                     <label >Password</label>
                     <input type="password"  id="password"  placeholder="Password">
-                    <i class="fas fa-check-circle"></i>
-                    <i class="fas fa-exclamation-circle"></i>
                     <small> Error message </small>
             
         </div>
         <div class ="form-control">
             <label >Password check</label>
             <input type="password"  id="checkPassword"  placeholder="Password check">
-            <i class="fas fa-check-circle"></i>
-            <i class="fas fa-exclamation-circle"></i>
             <small> Error message </small>
     
         </div>
