@@ -1,7 +1,10 @@
-:root{
-    /* Defining variable,root accessible */
-     --success-color:#2ecc71;
-    --error-color: #e74c3c;
+
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+
+ :root{
+   
+     --success-color:#0def18;
+    --error-color: #d32b18;
 } 
 *{
     box-sizing: border-box;
@@ -10,7 +13,7 @@ body{
     background:url(dodo.jpg)  ;
     background-size: cover;
     height: 600px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'DynaPuff', cursive;
     display: flex;
     justify-content: right;
     align-items: center;
@@ -77,7 +80,7 @@ margin-right: 40px;
 }
 .form button{
     background-color: rgb(43, 81, 9);
-    ;
+    font-family: 'DynaPuff', cursive;
     border: 2px solid white ;
     color: #fff;
     display: block;
@@ -85,4 +88,8 @@ margin-right: 40px;
     padding: 10px;
     font-size: 16px;
     border-radius: 4px;
+
+ 
+     
+   
 }

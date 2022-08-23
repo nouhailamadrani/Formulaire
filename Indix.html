@@ -5,67 +5,79 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Form Validation js</title>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
+    <div class ="container">
+        <div class ="header">
             <h2>Create Account</h2>
+
         </div>
         <form class="form" id="form">
-            <div class="form-control">
-                <label>Username</label>
-                <input type="text" placeholder="enter your username" id="Username">
-                <i class="fas fa-check-cercle"></i>
-                <i class="fas fa-exclamation-cercle"></i>
-                <small>error message</small>
+        
 
-            </div>
-            <!--  -->  <form class="form" id="form">
-            <div class="form-control">
-                <label>Number</label>
-                <input type="text" placeholder="enter your number" id="Number">
-                <i class="fas fa-check-cercle"></i>
-                <i class="fas fa-exclamation-cercle"></i>
-                <small>error message</small>
+        <div class ="form-control ">
+            <label >Full Name</label>
+            <input type="text"  id="fullName"  placeholder="Fullname">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small> Error message </small>
+    
+        </div>
+        <div class ="form-control ">
+            <label >Age</label>
+            <input type="text"  id="age"  placeholder="Age">
+            
+            <small> Error message </small>
+    
+        </div>
+        <div class ="form-control ">
+                <label >Email</label>
+                <input type="text"  id="email"  placeholder="Email address">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small> Error message </small>
+        
+        </div>
 
-            </div>
-            <!--  -->
-            <div class="form-control">
-                <label>Email</label>
-                <input type="text" placeholder="enter you email" id="Email">
-                <i class="fas fa-check-cercle"></i>
-                <i class="fas fa-exclamation-cercle"></i>
-                <small>error message</small>
 
-            </div>
-            <div class="form-control">
-                <label>Your Gender</label>
-                <select name="gender" id="gender">
-                  <option disabled selected value>-- select an option --</option>
-                  <option value="male">Male</option>
-                  <option value="female">Female</option>
-                </select>
-              </div>
-            <div class="form-control">
-                <label>password</label>
-                <input type="password" placeholder="enter your password" id="password">
-                <i class="fas fa-check-cercle"></i>
-                <i class="fas fa-exclamation-cercle"></i>
-                <small>error message</small>
-                
-            </div>
-            <div class="form-control">
-                <label>password check</label>
-                <input type="password" placeholder="check your password" id="password2">
-                <i class="fas fa-check-cercle"></i>
-                <i class="fas fa-exclamation-cercle"></i>
-                <small>error message</small>
-                
-            </div>
-            <button>submit</button>
+        <div class="form-control">
+            <label>Your Gender</label>
+            <select name="gender" id="gender">
+              <option disabled selected value>-- select an option --</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+
+          <div class ="form-control ">
+            <label >Phone Number</label>
+            <input type="text"  id="phoneNumber"  placeholder="Phone number">
+            
+            <small> Error message </small>
+    
+        </div>
+
+        <div class ="form-control">
+                    <label >Password</label>
+                    <input type="password"  id="password"  placeholder="Password">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small> Error message </small>
+            
+        </div>
+        <div class ="form-control">
+            <label >Password check</label>
+            <input type="password"  id="checkPassword"  placeholder="Password check">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small> Error message </small>
+    
+        </div>
+        <button>submit </button>
         </form>
     </div>
-    
+  
+    <script src="./script.js"></script>
 </body>
 </html>
